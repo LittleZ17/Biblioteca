@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,9 +48,9 @@
                 <input class="boxDatos" type="text" name="portada" placeholder="../archivo/imagen">
             </label>
 
-            <input class='btnCrear' type="submit" value="Crear">
+            <button onclick="alerta('Se ha creado con exito!')" class='btnCrear' type="submit">Crear</button>
         </form>
     </div>
+    <script src="./alertas.js"></script>
 </body>
-
 </html>

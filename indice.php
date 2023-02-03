@@ -51,7 +51,7 @@ $query = mysqli_query($con1, $SQL_READ);
                     <div class="titulo">
                         <h4><?=
 
-                        strlen($row['titulo']) < 20 ?  ($row['titulo']) : (substr($row['titulo'], 0, 20) . '...');
+                        strlen($row['titulo']) < 19 ?  ($row['titulo']) : (substr($row['titulo'], 0, 19) . '...');
 
 
                          ?></h4>
@@ -70,13 +70,14 @@ $query = mysqli_query($con1, $SQL_READ);
                         <div class="btnsIcons">
                             <a class="eye" href="detalle.php?id=<?= $row['id'] ?>"><i class="bi bi-eye-fill"></i></a>
                             <a class="pencil" href="edicion-formulario.php?id=<?= $row['id'] ?>"><i class="bi bi-pencil-fill"></i></a>
-                            <a class="trash" href="./logica/borrar.php?id=<?= $row['id'] ?>" class="trash"><i class="bi bi-trash3-fill"></i></a>
+                            <a onclick="alerta('Se ha eliminado con exito!')" class="trash" href="./logica/borrar.php?id=<?= $row['id'] ?>" class="trash"><i class="bi bi-trash3-fill"></i></a>
                         </div>
                     </div>
                 </div>
             <?php endwhile; ?>
         </main>
     </div>
+    <script src="./alertas.js"></script>
 </body>
 
 </html>
